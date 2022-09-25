@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteApp">
         <activity
-            android:name="com.mycoding.noteapp.MainActivity"
+            android:name="com.mycoding.noteapp.feature_note.presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.NoteApp">
