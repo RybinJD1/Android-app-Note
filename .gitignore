@@ -1,0 +1,16 @@
+# Default ignored files
+*.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+.idea
+build/
+.navigation
+captures/
+output.json
+/app/release/
