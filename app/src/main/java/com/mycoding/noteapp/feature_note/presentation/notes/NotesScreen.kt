@@ -53,11 +53,13 @@ fun NotesScreen(
                     .padding(padding)
             ) {
                 Row(
-                    modifier = Modifier.fillMaxWidth(),
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth(),
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Text(text = "your note", style = MaterialTheme.typography.h4)
+                    Text(text = "Notes", style = MaterialTheme.typography.h4)
                     IconButton(
                         onClick = {
                             viewModel.onEvent(NotesEvent.ToggleOrderSection)

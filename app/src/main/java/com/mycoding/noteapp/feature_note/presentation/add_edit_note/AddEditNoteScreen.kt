@@ -84,7 +84,7 @@ fun AddEditNoteScreen(
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(8.dp),
+                        .padding(16.dp),
                     horizontalArrangement = Arrangement.SpaceBetween
                 ) {
                     Note.noteColors.forEach { color ->
@@ -117,7 +117,7 @@ fun AddEditNoteScreen(
                         )
                     }
                 }
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(8.dp))
                 TransparentTextField(
                     text = titleState.text,
                     hint = titleState.hint,
@@ -129,7 +129,8 @@ fun AddEditNoteScreen(
                     },
                     isHintVisible = titleState.isHintVisible,
                     singleLine = true,
-                    textStyle = MaterialTheme.typography.h5
+                    textStyle = MaterialTheme.typography.h4,
+                    modifier = Modifier.padding(10.dp)
                 )
                 Spacer(modifier = Modifier.height(16.dp))
                 TransparentTextField(
@@ -143,7 +144,9 @@ fun AddEditNoteScreen(
                     },
                     isHintVisible = contentState.isHintVisible,
                     textStyle = MaterialTheme.typography.body1,
-                    modifier = Modifier.fillMaxHeight()
+                    modifier = Modifier
+                        .padding(10.dp)
+                        .fillMaxHeight()
                 )
             }
         }
