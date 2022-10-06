@@ -9,6 +9,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusState
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.text.TextStyle
 
 
@@ -21,6 +22,7 @@ fun TransparentTextField(
     onValueChange: (String) -> Unit,
     textStyle: TextStyle = TextStyle(),
     singleLine: Boolean = false,
+    testTag: String = "",
     onFocusChange: (FocusState) -> Unit
 ) {
     Box(modifier = modifier) {
@@ -31,6 +33,7 @@ fun TransparentTextField(
             textStyle = textStyle,
             modifier = Modifier
                 .fillMaxWidth()
+                .testTag(testTag)
                 .onFocusChanged {
                     onFocusChange(it)
                 }
